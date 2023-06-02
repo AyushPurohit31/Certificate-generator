@@ -19,7 +19,7 @@ app.post('/api/generate-certificate', (req, res) => {
   // Send the e-certificate as a PDF attachment to the provided email
   utils.sendCertificate(email, generatedCertificate);
 
-  res.sendStatus(200);
+  res.status(201).json("E-Certificate sent successfully to your email!");
 });
 
 // Serve the React app for any other routes
